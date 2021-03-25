@@ -9,9 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = this.formBuilder.group({
-    email: new FormControl('', Validators.compose([
-      Validators.required,
-      Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+    username: new FormControl('', Validators.compose([
+      Validators.required
     ])),
     password: new FormControl('', Validators.compose([
       Validators.required
@@ -19,13 +18,11 @@ export class LoginComponent implements OnInit {
   });
   errorMessage: string;
   validation_messages = {
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Please enter a valid email.' }
+    'username': [
+      { type: 'required', message: 'Email is required.' }
     ],
     'password': [
-      { type: 'required', message: 'Password is required.' },
-      // { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+      { type: 'required', message: 'Password is required.' }
     ]
   };
   constructor(
