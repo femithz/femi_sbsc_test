@@ -1,0 +1,25 @@
+        <div class="row col-md-12">
+                <div class="col-md-9">
+                    <div class="dark-login">
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                     <div class="light-login container top" >
+                        <div class="title"><span>S</span> Express Lands</div><br>
+                        <h1>Login to<br />your account</h1><br>
+                        <p>Welcome back! Please login to your account</p> <br>
+                        <form class="form" [formGroup]="loginForm" >
+                            <div class="mb-4">    
+                                <input class="form-control" formControlName="username" type="text" placeholder="Enter Username" name="text">
+                            </div>
+                            <div class="mb-4">    
+                                <input class="form-control" formControlName="password" type="password" placeholder="Enter password" name="password">
+                            </div>
+                            <div class="mb-4 col-xs-12">    
+                                <button type="submit" [disabled]="!loginForm.valid" class="btn button-login col-12" (click)="login()">LOGIN</button>
+                            </div>
+                            <p class="text-center forget">Forget password?</p>
+                        </form>
+                     </div>    
+                </div>
+        </div>
